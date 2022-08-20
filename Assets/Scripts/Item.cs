@@ -29,7 +29,7 @@ public class Item : MonoBehaviour
         {
             case InteractionType.PickUp:
                 //Add the object to the PickedUpItems list
-                //FindObjectOfType<InventorySystem>().PickUp(gameObject);
+                FindObjectOfType<InventorySystem>().PickUp(gameObject);
                 Debug.Log("Picked up object");
                 //Disable
                 gameObject.SetActive(false);
