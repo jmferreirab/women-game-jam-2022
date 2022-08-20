@@ -25,12 +25,6 @@ public class PenguinMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (CanWalk)
-        {
-            Rigidbody2D.velocity = new Vector2(Horizontal * Speed, Vertical * Speed);
-        } else
-        {
-            Rigidbody2D.velocity = Vector2.zero;
-        }
+        Rigidbody2D.velocity = new Vector2(Horizontal * Speed, Vertical * Speed);
     }
 }
