@@ -9,7 +9,7 @@ public class InteractionSystem: MonoBehaviour
     //Detection Point
     public Transform detectionPoint;
     //Detection Radius
-    private const float detectionRadius = 0.2f;
+    private const float detectionRadius = 0.06f;
     //Detection Layer
     public LayerMask detectionLayer;
     //Cached Trigger Object

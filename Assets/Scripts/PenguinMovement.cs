@@ -22,24 +22,11 @@ public class PenguinMovement : MonoBehaviour
         Horizontal = Input.GetAxisRaw("Horizontal");
         Vertical = Input.GetAxisRaw("Vertical");
 
-        if (Physics2D.Raycast(transform.position, transform.forward, 0.1f))
-        {
-            CanWalk = true;
-        }
-        else
-        {
-            CanWalk = false;
-        }
+        
     }
 
     private void FixedUpdate()
     {
-        if (CanWalk)
-        {
-            Rigidbody2D.velocity = new Vector2(Horizontal * Speed, Vertical * Speed);
-        } else
-        {
-            Rigidbody2D.velocity = Vector2.zero;
-        }
+        Rigidbody2D.velocity = new Vector2(Horizontal * Speed, Vertical * Speed);
     }
 }
