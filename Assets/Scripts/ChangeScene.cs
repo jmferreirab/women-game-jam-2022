@@ -12,12 +12,12 @@ public class ChangeScene : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Enter)){
+        if(Input.GetKeyDown(KeyCode.Return)){
             SceneManager.LoadScene(idScene);
         }
     }
 
     public void ChangeSceneEnter(int idScene){
-            SceneManager.LoadScene(idScene);
+        SceneManager.LoadScene(idScene);
     }
 }
