@@ -7,17 +7,27 @@ using UnityEngine.SceneManagement;
 public class ChangeScene : MonoBehaviour
 {
 
-    public bool changeScene;
     public int idScene;
+    private bool place;
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Return)){
+        if(Input.GetKeyDown(KeyCode.Space) && place == true){
             SceneManager.LoadScene(idScene);
         }
     }
 
-    public void ChangeSceneEnter(int idScene){
-        SceneManager.LoadScene(idScene);
+    private void OnTriggerEnter2D(Collider2D other){
+        if(other.tag == "Player"){
+            Debug.Log("Player In - Press Space to Enter");
+            place = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other){
+        if(other.tag == "Player"){
+            Debug.Log("Player Exit");
+            place = true;
+        }
     }
 }

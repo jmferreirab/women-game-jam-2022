@@ -24,7 +24,7 @@ public class PlayerSounds : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(Random.Range(0, penguinChirps.Length));
+        //Debug.Log(Random.Range(0, penguinChirps.Length));
     }
 
     IEnumerator playRandomized()
