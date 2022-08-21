@@ -62,43 +62,43 @@ public class InventorySystem : MonoBehaviour
     { 
         foreach (var i in items_images) { i.gameObject.SetActive(false); }
 
-        HideDescription();
+        //HideDescription();
     }
     
-    public void ShowDescription(int id)
-    {
-        //Set the Image
-        description_Image.sprite = items_images[id].sprite;
-        //Set the Title
-        description_Title.text = items[id].name;
-        //Show the description
-        description_Text.text = items[id].GetComponent<Item>().descriptionText;
-        //Show the elements
-        description_Image.gameObject.SetActive(true);
-        description_Title.gameObject.SetActive(true);
-        description_Text.gameObject.SetActive(true);
-    }
+    //public void ShowDescription(int id)
+    //{
+    //    //Set the Image
+    //    description_Image.sprite = items_images[id].sprite;
+    //    //Set the Title
+    //    description_Title.text = items[id].name;
+    //    //Show the description
+    //    description_Text.text = items[id].GetComponent<Item>().descriptionText;
+    //    //Show the elements
+    //    description_Image.gameObject.SetActive(true);
+    //    description_Title.gameObject.SetActive(true);
+    //    description_Text.gameObject.SetActive(true);
+    //}
 
-    public void HideDescription()
-    {
-        description_Image.gameObject.SetActive(false);
-        description_Title.gameObject.SetActive(false);
-        description_Text.gameObject.SetActive(false);
-    }
+    //public void HideDescription()
+    //{
+    //    description_Image.gameObject.SetActive(false);
+    //    description_Title.gameObject.SetActive(false);
+    //    description_Text.gameObject.SetActive(false);
+    //}
 
-    public void Consume(int id)
-    {
-        if(items[id].GetComponent<Item>().type== Item.ItemType.Consumables)
-        {
-            Debug.Log($"CONSUMED {items[id].name}");
-            //Invoke the cunsume custome event
-            items[id].GetComponent<Item>().consumeEvent.Invoke();
-            //Destroy the item in very tiny time
-            Destroy(items[id], 0.1f);
-            //Clear the item from the list
-            items.RemoveAt(id);
-            //Update UI
-            Update_UI();
-        }
-    }
+    //public void Consume(int id)
+    //{
+    //    if(items[id].GetComponent<Item>().type== Item.ItemType.Consumables)
+    //    {
+    //        Debug.Log($"CONSUMED {items[id].name}");
+    //        //Invoke the cunsume custome event
+    //        items[id].GetComponent<Item>().consumeEvent.Invoke();
+    //        //Destroy the item in very tiny time
+    //        Destroy(items[id], 0.1f);
+    //        //Clear the item from the list
+    //        items.RemoveAt(id);
+    //        //Update UI
+    //        Update_UI();
+    //    }
+    //}
 }
