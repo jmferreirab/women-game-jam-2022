@@ -144,8 +144,8 @@ MonoBehaviour:
   penguinChirps:
   - {fileID: 8300000, guid: ea635696037a6d649a3da921a22fdcc2, type: 3}
   - {fileID: 8300000, guid: 6a83276439f32374dbfa54ea3ba575cf, type: 3}
-  chirpDelayLow: 3
-  chirpDelayHigh: 3
+  chirpDelayLow: 5
+  chirpDelayHigh: 20
 --- !u!1 &4727269615140497760
 GameObject:
   m_ObjectHideFlags: 0
@@ -457,6 +457,7 @@ MonoBehaviour:
   items: []
   isOpen: 0
   ui_Window: {fileID: 0}
+  side_Window: {fileID: 0}
   items_images:
   - {fileID: 0}
   - {fileID: 0}
@@ -519,8 +520,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speechBubble: {fileID: 0}
-  hideTimeout: 1.5
-  timeToReappear: 5
+  hideTimeout: 5
+  timeToReappear: 20
 --- !u!1 &8926283249547095472
 GameObject:
   m_ObjectHideFlags: 0

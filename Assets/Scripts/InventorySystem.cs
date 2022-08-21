@@ -13,6 +13,9 @@ public class InventorySystem : MonoBehaviour
     [Header("UI Items Section")]
     //Inventory System Window
     public GameObject ui_Window;
+    public GameObject side_Window;
+
+
     public Image[] items_images;
     [Header("UI Item Description")]
     public GameObject ui_Description_Window;
@@ -33,6 +36,7 @@ public class InventorySystem : MonoBehaviour
     {
         isOpen = !isOpen;
         ui_Window.SetActive(isOpen);
+        side_Window.SetActive(isOpen);
 
         Update_UI();
     }

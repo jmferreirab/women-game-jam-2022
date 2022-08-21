@@ -29,6 +29,9 @@ public class PlayerSounds : MonoBehaviour
 
     IEnumerator playRandomized()
     {
+
+        audioSource.PlayOneShot(penguinChirps[_sound_id]);
+
         while (true)
         {
             _delay = Random.Range(chirpDelayLow, chirpDelayHigh);
