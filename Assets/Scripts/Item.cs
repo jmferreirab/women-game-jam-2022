@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Audio;
 
 [RequireComponent(typeof(BoxCollider2D))]
 public class Item : MonoBehaviour
@@ -16,6 +17,8 @@ public class Item : MonoBehaviour
     [Header("Custom Events")]
     public UnityEvent customEvent;
     public UnityEvent consumeEvent;
+    [SerializeField]
+    AudioClip pickupSound;
 
     private void Reset()
     {
@@ -33,6 +36,7 @@ public class Item : MonoBehaviour
                 Debug.Log("Picked up object");
                 //Disable
                 gameObject.SetActive(false);
+                AudioSource.PlayClipAtPoint(pickupSound, gameObject.transform.position);                
                 break;
             case InteractionType.Examine:
                 //Call the Examine item in the interaction system

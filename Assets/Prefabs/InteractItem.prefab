@@ -83,7 +83,7 @@ SpriteRenderer:
   m_Size: {x: 0.64, y: 0.64}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!61 &6643195725956234068
@@ -133,3 +133,4 @@ MonoBehaviour:
   consumeEvent:
     m_PersistentCalls:
       m_Calls: []
+  pickupSound: {fileID: 8300000, guid: db3a2b8a50a1db84ba660cdfd8518439, type: 3}
